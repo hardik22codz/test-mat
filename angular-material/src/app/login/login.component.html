@@ -1,0 +1,53 @@
+<mat-card>
+  <mat-card-title>Login</mat-card-title>
+  <mat-card-content>
+    <form class="example-form" #f="ngForm" (ngSubmit)="login(f)">
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input
+          type="email"
+          matInput
+          name="emailFormControl"
+          ngModel
+          #emailFormControl="ngModel"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          placeholder="Ex. pat@example.com"
+          email
+          required
+        />
+        <mat-error *ngIf="f.submitted && emailFormControl.errors">
+          Email is <strong>required</strong>
+        </mat-error>
+        <!-- <mat-error *ngIf="f.submitted && emailFormControl?.errors?.pattern">
+          Email must be a valid email address.
+        </mat-error> -->
+        <!-- {{ emailFormControl?.errors | json }} -->
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input
+          type="password"
+          matInput
+          required
+          ngModel
+          autocomplete
+          id="passwordFormControl"
+          name="passwordFormControl"
+          #passwordFormControl="ngModel"
+          minlength="6"
+        />
+        <mat-error *ngIf="f.submitted && emailFormControl.errors">
+          Please enter a valid password
+        </mat-error>
+        <!-- <mat-error *ngIf="passwordFormControl.errors['minlength']">Password must be at least 6 characters</mat-error> -->
+      </mat-form-field>
+      <div class="center-button">
+        <button mat-raised-button type="submit">Login</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+<!-- <mat-error *ngIf="emailFormControl.errors['email']">
+          Please enter a valid email address
+        </mat-error> -->

@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "emailFormControl": "Hardik@gmail.com",
+      "passwordFormControl": "123456",
+      "firstNameFormControl": "Hardik",
+      "lastNameFormControl": "Modi",
+      "dateFormControl": "",
+      "AddressFormControl": "",
+      "radioOption": "1",
+      "id": 1
+    },
+    {
+      "emailFormControl": "hardik@gmail.com",
+      "passwordFormControl": "123456",
+      "firstNameFormControl": "Hardik",
+      "lastNameFormControl": "1234",
+      "dateFormControl": "",
+      "AddressFormControl": "",
+      "radioOption": "1",
+      "id": 2
+    },
+    {
+      "emailFormControl": "myntra@gmail.com",
+      "passwordFormControl": "789123",
+      "firstNameFormControl": "Hardik",
+      "lastNameFormControl": "Myntra",
+      "dateFormControl": "1991-12-31T18:30:00.000Z",
+      "AddressFormControl": "Address",
+      "radioOption": "1",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
